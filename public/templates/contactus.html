@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>List of Users</h2>
+  <p>List of users coming from mongo db</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>userName</th>
+        <th>password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="u in users">
+        <td>{{u.firstName}}</td>
+        <td>{{u.lastName}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.userName}}</td>
+        <td>{{u.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
