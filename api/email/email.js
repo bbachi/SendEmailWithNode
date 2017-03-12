@@ -9,14 +9,14 @@ Email.prototype.log = function(logText) {
 Email.prototype.sendEmail = function(emailOptions) {
 
     var module = emailOptions.module;
-    if(module == 'contactus') {
-            mailOptions = {
-            from: '', // sender address
-            to: emailOptions.fromEmail, // list of receivers
-            subject: '', // Subject line
-            html: '<p>this is test email</p>' // html body
-        };
-    }
+    
+        mailOptions = {
+        from: 'mytesttest90@gmail.com', // sender address
+        to: emailOptions.fromEmail, // list of receivers
+        subject: 'Contact US', // Subject line
+        html: '<P>FROM EMAIL: '+emailOptions.fromEmail+"<br><br><h2>Description</h2>:<p>"+emailOptions.fromEmail; // html body
+    };
+    
 
     console.log('mail options:::::::'+JSON.stringify(mailOptions));
 
@@ -34,8 +34,8 @@ Email.prototype.sendEmail = function(emailOptions) {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '',
-        pass: ''
+        user: 'mytesttest90@gmail.com',
+        pass: 'test9test'
     }
 });
 
