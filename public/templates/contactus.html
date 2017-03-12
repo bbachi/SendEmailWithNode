@@ -1,24 +1,34 @@
 <div class="container">
-  <h2>List of Users</h2>
-  <p>List of users coming from mongo db</p>            
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>userName</th>
-        <th>password</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="u in users">
-        <td>{{u.firstName}}</td>
-        <td>{{u.lastName}}</td>
-        <td>{{u.email}}</td>
-        <td>{{u.userName}}</td>
-        <td>{{u.password}}</td>
-      </tr>
-    </tbody>
-  </table>
+<form action="">
+    
+       <div class="form-group row">
+  <label for="example-text-input" class="col-lg-2 col-form-label">Firstname:</label>
+  <div class="col-lg-6">
+    <input class="form-control" ng-model="formData.fname" type="text" id="example-text-input" placeholder="Enter your firstname">
+  </div>
+</div>
+    
+    <div class="form-group row">
+  <label for="example-text-input" class="col-lg-2 col-form-label">Lastname</label>
+  <div class="col-lg-6">
+    <input class="form-control" type="text" ng-model="formData.lname" placeholder="Enter lastname" id="example-text-input">
+  </div>
+</div>
+    
+<div class="form-group row">
+  <label for="example-email-input" class="col-lg-2 col-form-label">Email:</label>
+  <div class="col-lg-6">
+    <input class="form-control" type="email" ng-model="formData.email" placeholder="someone@something.com" id="example-email-input">
+  </div>
+</div>
+   
+    <div class="form-group row">
+    <label for="example-subject-input" class="col-lg-2 col-form-label">Subject:</label>
+    <div class="col-lg-6">
+    <textarea id="subject" class="form-control" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+        </div>
+
+    <input type="submit" class="btn btn-success" value="Submit">
+    </form>
 </div>
