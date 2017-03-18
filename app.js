@@ -8,6 +8,7 @@ var Email = require('./api/email/email.js');
 var LOG = require('./api/log/log.js');
 
 
+
 var app = express();
  
 app.use(bodyParser.json());
@@ -17,11 +18,7 @@ var port = process.env.PORT || 3000;
 var contactUsRouter = express.Router();
 
 contactUsRouter.route('/contactus').post(function(req,res){
-    
- <<<<<<< HEAD
-   // var emailOptions =  req.body.emailOptions;
-  // console.log("in node:::::::::::::::::::::::::::::");
-   // Email.sendEmail(emailOptions);
+ 
     var emailOptions = {};
 emailOptions.toEmail = "vinorannadi@gmail.com";
 emailOptions.senderNameFirst = req.body.fname;
@@ -30,11 +27,7 @@ emailOptions.senderEmail = req.body.email;
 emailOptions.subject = req.body.subject;
     //console.log(emailOptions);
 
-=======
-    var emailOptions =  req.body.emailOptions;
-    console.log(JSON.stringify(emailOptions));
-    Email.sendEmail(emailOptions);
->>>>>>> origin/master
+
     
        res.send(Email.sendEmail(emailOptions));
     //console.log("response "+Email.sendEmail(emailOptions));
@@ -44,7 +37,6 @@ emailOptions.subject = req.body.subject;
 var emailOptions = {};
 emailOptions.fromEmail = "vinorannadi@gmail.com";
 Email.sendEmail(emailOptions);
-
 
 
 

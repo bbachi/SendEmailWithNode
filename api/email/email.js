@@ -8,7 +8,7 @@ Email.prototype.sendEmail = function(emailOptions) {
    // console.log('email'+emailOptions.fromEmail);
     
 
-<<<<<<< HEAD
+
  var module = emailOptions.module;
    
             mailOptions = {
@@ -17,19 +17,14 @@ Email.prototype.sendEmail = function(emailOptions) {
             subject: 'Contact Us', // Subject line
             html: '<h2>Name: '+emailOptions.senderNameFirst+' '+emailOptions.senderNameLast+'</h2><br><h3> Email: '+emailOptions.senderEmail+'</h3><br><p> Subject: '+emailOptions.subject+'</p>'
         };
-=======
-    var module = emailOptions.module;
-    
-        mailOptions = {
-        from: 'mytesttest90@gmail.com', // sender address
-        to: emailOptions.fromEmail, // list of receivers
-        subject: 'Contact US', // Subject line
-        html: '<P>FROM EMAIL: '+emailOptions.fromEmail+"<br><br><h2>Description</h2>:<p>"+emailOptions.fromEmail; // html body
-    };
->>>>>>> origin/master
+
+ 
+
+
     
 
-    //console.log('mail options:::::::'+JSON.stringify(mailOptions));
+    console.log('mail options:::::::'+JSON.stringify(mailOptions));
+
 
     transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

@@ -16,10 +16,6 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "mongoose": "^4.8.1",
-<<<<<<< HEAD
-    "nodemailer": "^3.1.7"
-=======
-    "nodemailer": "^3.1.5"
->>>>>>> origin/master
+    "nodemailer": "^3.1.
   }
 }
