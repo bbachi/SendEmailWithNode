@@ -2,30 +2,42 @@ var nodemailer = require('nodemailer');
 
 var Email = function() {};
 
-Email.prototype.log = function(logText) {
-    console.log('Email Service:::::'+logText);
-};
+
 
 Email.prototype.sendEmail = function(emailOptions) {
+   // console.log('email'+emailOptions.fromEmail);
+    
 
-    var module = emailOptions.module;
-    if(module == 'contactus') {
+<<<<<<< HEAD
+ var module = emailOptions.module;
+   
             mailOptions = {
-            from: '', // sender address
-            to: emailOptions.fromEmail, // list of receivers
-            subject: '', // Subject line
-            html: '<p>this is test email</p>' // html body
+            from: 'mytesttest90@gmail.com', // sender address
+            to: emailOptions.toEmail, // list of receivers
+            subject: 'Contact Us', // Subject line
+            html: '<h2>Name: '+emailOptions.senderNameFirst+' '+emailOptions.senderNameLast+'</h2><br><h3> Email: '+emailOptions.senderEmail+'</h3><br><p> Subject: '+emailOptions.subject+'</p>'
         };
-    }
+=======
+    var module = emailOptions.module;
+    
+        mailOptions = {
+        from: 'mytesttest90@gmail.com', // sender address
+        to: emailOptions.fromEmail, // list of receivers
+        subject: 'Contact US', // Subject line
+        html: '<P>FROM EMAIL: '+emailOptions.fromEmail+"<br><br><h2>Description</h2>:<p>"+emailOptions.fromEmail; // html body
+    };
+>>>>>>> origin/master
+    
 
-    console.log('mail options:::::::'+JSON.stringify(mailOptions));
+    //console.log('mail options:::::::'+JSON.stringify(mailOptions));
 
     transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         return console.log(error);
     }
-        console.log('Message %s sent: %s', info.messageId, info.response);
+       // console.log('Message %s sent: %s', info.messageId, info.response);
     });
+     return "Your response is being evaluated, we'll contact you soon.";
 }
 
 
@@ -34,8 +46,8 @@ Email.prototype.sendEmail = function(emailOptions) {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '',
-        pass: ''
+        user: 'mytesttest90@gmail.com',
+        pass: 'test9test'
     }
 });
 
